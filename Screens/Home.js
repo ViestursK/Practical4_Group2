@@ -5,7 +5,7 @@ import { Button, StyleSheet, Text, View, Image } from "react-native";
 
 export default function Home ({navigation}){
     const pressHandler =()=>{
-        navigation.navigate("NewsList");
+        navigation.navigate("List");
     }
 
   return (

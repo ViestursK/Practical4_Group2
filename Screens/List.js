@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, FlatList, Text, View,Image,StyleSheet } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  Text,
+  View,
+  Image,
+  StyleSheet,
+} from "react-native";
 
-export default function NewsList () {
+export default function NewsList() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -23,17 +30,13 @@ export default function NewsList () {
         <FlatList
           data={data}
           keyExtractor={({ id }, index) => id}
-        
           renderItem={({ item }) => (
             <View style={styles.box}>
               <View style={styles.titleView}>
                 <Text style={styles.title}>{item.title}</Text>
               </View>
               <View style={styles.contentContainer}>
-                <Image
-                  source={{ uri: item.urlToImage }}
-                  style={styles.image}
-                />
+                <Image source={{ uri: item.urlToImage }} style={styles.image} />
                 <View style={styles.descCont}>
                   <Text style={styles.content}>{item.description}</Text>
                   <Text></Text>
@@ -45,8 +48,7 @@ export default function NewsList () {
       )}
     </View>
   );
-};
-
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -67,7 +69,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     borderTopWidth: 0,
     borderColor: "black",
-   
   },
   titleView: {
     padding: 10,
@@ -93,10 +94,10 @@ const styles = StyleSheet.create({
     width: "50%",
     paddingLeft: 2,
   },
-  image:{
+  image: {
     width: 150,
     height: 150,
     borderRadius: 100,
     margin: 10,
-  }
+  },
 });
