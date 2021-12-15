@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../Screens/Home";
-import Newslist from "../Screens/NewsList";
+import List from "../Screens/List";
 
 
 const { Navigator, Screen } = createStackNavigator();
@@ -10,7 +10,7 @@ const { Navigator, Screen } = createStackNavigator();
 const HomeNavigator = () => (
   <Navigator>
     <Screen name="Home" component={Home} />
-    <Screen name="NewsList" component={Newslist} />
+    <Screen name="List" component={List} />
   </Navigator>
 );
 
